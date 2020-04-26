@@ -38,10 +38,10 @@ app.get(['/facebook', '/instagram'], function(req, res) {
 
 app.post('/facebook', function(req, res) {
 
-  if (!req.isXHubValid()) {
-    res.sendStatus(401);
-    return;
-  }
+//   if (!req.isXHubValid()) {
+//     res.sendStatus(401);
+//     return;
+//   }
 
   console.log(JSON.stringyfy(req.body.body))
   received_updates.push(req.body);

@@ -37,16 +37,13 @@ app.get(['/facebook', '/instagram'], function(req, res) {
 });
 
 app.post('/facebook', function(req, res) {
-  console.log('Facebook request body:', req.body);
 
   if (!req.isXHubValid()) {
-    console.log('Warning - request header X-Hub-Signature not present or invalid');
     res.sendStatus(401);
     return;
   }
 
-  console.log('request header X-Hub-Signature validated');
-  console.log(req.body)
+  console.log(JSON.stringyfy(req.body))
   received_updates.push(req.body);
   res.sendStatus(200);
 });

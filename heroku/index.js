@@ -44,7 +44,7 @@ app.post('/facebook', function(req, res) {
   }
   
 
-  console.log(JSON.stringyfy(req.body))
+  console.log(JSON.stringify(req.body))
   received_updates.push(req.body);
   console.log( received_updates)
   res.sendStatus(200);
